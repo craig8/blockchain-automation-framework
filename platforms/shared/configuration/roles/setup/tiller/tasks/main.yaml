@@ -1,4 +1,6 @@
 ---
+- debug:
+    msg; "kubeconfigpath {{ kubeconfig_path }} {{ kubecontext }}"
 - name: Check if Tiller is already installed in the Kubernetes clusters
   k8s_info:
     kind: Pod
