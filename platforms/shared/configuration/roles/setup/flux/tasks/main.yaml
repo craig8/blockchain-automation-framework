@@ -62,4 +62,3 @@
 - name: Output ssh key
   debug:
     var: ssh_key.stdout
-- meta: end_play
