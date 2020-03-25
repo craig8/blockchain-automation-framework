@@ -2,7 +2,8 @@
 # This role setups communication between the vault and kubernetes cluster and install 
 # neccessary configurations.
 #############################################################################################
-
+- debug:
+    msg: "component_name {{ component_name }}  context: {{ kubernetes.context }}"
 # Check if namespace created
 - name: Check namespace is created
   k8s_facts:

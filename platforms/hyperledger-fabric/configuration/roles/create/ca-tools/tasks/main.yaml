@@ -1,10 +1,12 @@
 #############################################################################################
 # This role creates value file for the deployment of CA Tools CLI
 #############################################################################################
+- debug:
+    msg: "ca component_name {{ component_name }} kubeconfig: {{ kubernetes.config_file }} component_services.ca.name: {{ component_services.ca.name }}"
 
 # Check if CA server is available
 - name: Check CA-server is available
-  k8s_facts:
+  k8s_info:
     kind: Pod
     namespace: "{{ component_name }}"
     kubeconfig: "{{ kubernetes.config_file }}"

@@ -96,7 +96,7 @@
 # Copy the ca.crt when add_new_org is false 
 - name: Copy tls ca.crt from auto-generated path to given path
   copy:
-    src: "./build/crypto-config/ordererOrganizations/{{ orderer.org_name|lower }}-net/orderers/{{orderer.name}}.{{ orderer.org_name|lower }}-net/tls/ca.crt"
+    src: "/home/blockchain-automation-framework/platforms/hyperledger-fabric/configuration/build/crypto-config/ordererOrganizations/{{ orderer.org_name|lower }}-net/orderers/{{orderer.name}}.{{ orderer.org_name|lower }}-net/tls/ca.crt"
     dest: "{{ orderer.certificate }}"
     follow: no
     force: yes
