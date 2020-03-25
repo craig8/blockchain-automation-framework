@@ -15,8 +15,6 @@
     msg: "src {{ helm_templates[type] | default('helm_component.tpl') }}"
 - debug:
     msg: "dest {{ values_dir }}/{{ name }}/{{ component_name }}.yaml"
-- debug:
-    var: ansible_facts
 ############################################################################################
 # This task creates the value file for the helm release
 # This is done by consuming a template file which is passes as a variable by the role

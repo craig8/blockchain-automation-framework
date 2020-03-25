@@ -7,7 +7,7 @@ metadata:
     flux.weave.works/automated: "false"
 spec:
   chart:
-    path: {{ component_gitops.chart_source }}/frontend
+    path: "{{ component_gitops.chart_source }}/frontend"
     git: "{{ component_gitops.git_ssh }}"
     ref: "{{ component_gitops.branch }}"
   releaseName: {{ peer_name }}-frontend
