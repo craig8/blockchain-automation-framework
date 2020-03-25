@@ -89,6 +89,7 @@
 
   - debug:
       msg: Frontend is {{network["frontend"]}}
+  - meta: end-play
   ############################################################################################
   # Create frontend value file for the corda nodes
   - include_role:
