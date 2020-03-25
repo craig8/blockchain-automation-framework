@@ -11,7 +11,7 @@ KUBECONFIG=/home/blockchain-automation-framework/build/config
 
 
 echo "Running the playbooks..."
-exec ansible-playbook \
+ansible-playbook \
     -vv /home/blockchain-automation-framework/platforms/shared/configuration/site.yaml \
     --inventory-file=/home/blockchain-automation-framework/platforms/shared/inventory/ \
     -e "@/home/blockchain-automation-framework/build/network.yaml" \
