@@ -10,14 +10,14 @@ export PATH=/root/bin:$PATH
 KUBECONFIG=/home/blockchain-automation-framework/build/config
 
 
-echo "Running the playbook..."
-exec ansible-playbook \
+echo "Running the playbooks..."
+ansible-playbook \
     -vv /home/blockchain-automation-framework/platforms/shared/configuration/site.yaml \
     --inventory-file=/home/blockchain-automation-framework/platforms/shared/inventory/ \
     -e "@/home/blockchain-automation-framework/build/network.yaml" \
     -e 'ansible_python_interpreter=/usr/bin/python3'
 
-exec ansible-playbook \ 
+ansible-playbook \ 
     -vv examples/supplychain-app/configuration/deploy-supplychain-app.yaml \ 
     --inventory-file=/home/blockchain-automation-framework/platforms/shared/inventory/ \
     -e "@/home/blockchain-automation-framework/build/network.yaml" \
