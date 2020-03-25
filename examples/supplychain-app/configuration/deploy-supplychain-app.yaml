@@ -87,6 +87,8 @@
       loop_var: organization_data
     when: network['type'] == 'corda' and network['frontend'] == 'enabled' and component_type == 'node' 
 
+  - debug:
+      msg: Frontend is {{network["frontend"]}}
   ############################################################################################
   # Create frontend value file for the corda nodes
   - include_role:
