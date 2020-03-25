@@ -5,6 +5,8 @@
 # This will apply to ansible_provisioners. /etc/ansible/hosts should be configured with this group
 - hosts: ansible_provisioners
   gather_facts: no
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
   ############################################################################################
   # Create restserver value file for the peer nodes
